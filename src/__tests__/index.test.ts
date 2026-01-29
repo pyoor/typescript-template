@@ -2,12 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/**
- * Adds two numbers together.
- * @param a - The first number.
- * @param b - The second number.
- * @returns The sum of a and b.
- */
-export function add(a: number, b: number): number {
-  return a + b
-}
+import { add } from "../index"
+
+describe("add", () => {
+  it("should add two numbers", () => {
+    expect(add(2, 3)).toBe(5)
+  })
+})
